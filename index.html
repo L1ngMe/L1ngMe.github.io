@@ -3,301 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио и Резюме</title>
+    <title>Моё Портфолио</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: 'Arial', sans-serif;
+            background-color: #2b2b2b;
+            color: #fff;
         }
 
         header {
-            background-color: #1e1e1e;
-            color: white;
-            padding: 50px 0;
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
             text-align: center;
+            padding: 50px 20px;
             position: relative;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 50px;
-            letter-spacing: 2px;
+            font-size: 4em;
+            text-transform: uppercase;
+            letter-spacing: 10px;
         }
 
-        header p {
-            font-size: 22px;
+        header h2 {
+            font-size: 1.5em;
             margin-top: 10px;
-            color: #f0a500;
-        }
-
-        header img {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #f0a500;
-        }
-
-        nav {
-            background-color: #f0a500;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        nav a {
-            color: #1e1e1e;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
         }
 
         section {
-            padding: 60px 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
         }
 
-        h2 {
-            color: #f0a500;
-            margin-bottom: 20px;
-            font-size: 30px;
-            border-bottom: 3px solid #f0a500;
-            padding-bottom: 10px;
-            text-align: center;
-        }
-
-        .about {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .about img {
-            width: 300px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .about p {
-            flex: 1;
-            font-size: 18px;
-        }
-
-        .skills, .experience, .education {
-            display: flex;
-            gap: 30px;
-            justify-content: space-between;
-        }
-
-        .skills div, .experience div, .education div {
-            flex: 1;
+        .project {
+            background-color: #333;
             padding: 20px;
-            background-color: #fafafa;
             border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .skills ul, .experience ul, .education ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .skills li, .experience li, .education li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-            font-size: 16px;
-        }
-
-        .skills li::before, .experience li::before, .education li::before {
-            content: '✔';
-            position: absolute;
-            left: 0;
-            color: #f0a500;
-            font-size: 18px;
-        }
-
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .portfolio .project {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-
-        .portfolio .project img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .portfolio .project p {
-            position: absolute;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            width: 100%;
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            transition: background-color 0.3s;
-        }
-
-        .portfolio .project:hover {
+        .project:hover {
             transform: scale(1.05);
+            background-color: #ff4b2b;
         }
 
-        .portfolio .project:hover p {
-            background-color: #f0a500;
+        .project h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 1.2em;
         }
 
         footer {
+            background-color: #1a1a1a;
             text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: white;
-            border-top: 5px solid #f0a500;
+            padding: 30px 20px;
         }
 
+        footer p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        footer a {
+            color: #ff416c;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ff4b2b;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ваше Имя</h1>
-        <p>Позиция, которую вы ищете | Город, Страна</p>
-        <img src="https://via.placeholder.com/150" alt="Ваше Фото">
-    </header>
 
-    <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#skills">Навыки</a>
-        <a href="#experience">Опыт</a>
-        <a href="#education">Образование</a>
-        <a href="#portfolio">Портфолио</a>
-    </nav>
+<header>
+    <h1>Моё Портфолио</h1>
+    <h2>Веб-дизайнер и разработчик</h2>
+</header>
 
-    <div class="container">
-        <div class="content">
-            <section id="about" class="about">
-                <h2>Обо мне</h2>
-                <img src="https://via.placeholder.com/300" alt="Описание изображения">
-                <p>Здесь вы можете написать краткую информацию о себе. Расскажите о своем опыте, навыках и что отличает вас от других кандидатов. Это ваше первое впечатление, сделайте его запоминающимся.</p>
-            </section>
-
-            <section id="skills" class="skills">
-                <h2>Навыки</h2>
-                <div>
-                    <h3>Технические навыки</h3>
-                    <ul>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>Python, Java</li>
-                        <li>SQL, NoSQL</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Мягкие навыки</h3>
-                    <ul>
-                        <li>Командная работа</li>
-                        <li>Критическое мышление</li>
-                        <li>Управление временем</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="experience" class="experience">
-                <h2>Опыт работы</h2>
-                <div>
-                    <h3>Должность 1</h3>
-                    <p>Название компании, Город</p>
-                    <p><strong>Срок работы:</strong> Январь 2020 - настоящее время</p>
-                    <ul>
-                        <li>Описание обязанностей и достижений</li>
-                        <li>Описание обязанностей и достижений</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Должность 2</h3>
-                    <p>Название компании, Город</p>
-                    <p><strong>Срок работы:</strong> Январь 2018 - Декабрь 2019</p>
-                    <ul>
-                        <li>Описание обязанностей и достижений</li>
-                        <li>Описание обязанностей и достижений</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="education" class="education">
-                <h2>Образование</h2>
-                <div>
-                    <h3>Степень</h3>
-                    <p>Название университета, Город</p>
-                    <p><strong>Годы обучения:</strong> 2015 - 2019</p>
-                </div>
-                <div>
-                    <h3>Дополнительное обучение</h3>
-                    <p>Курсы или сертификации</p>
-                    <p><strong>Год завершения:</strong> 2020</p>
-                </div>
-            </section>
-
-            <section id="portfolio" class="portfolio">
-                <h2>Портфолио</h2>
-                <div class="project">
-                    <a href="https://example.com/project1" target="_blank">
-                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Проект 1">
-                        <p>Проект 1 - Краткое описание проекта.</p>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="https://example.com/project2" target="_blank">
-                        <img src="https://images.unsplash.com/photo-1504691342899-c3f1b7a5d0a2" alt="Проект 2">
-                        <p>Проект 2 - Краткое описание проекта.</p>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="https://example.com/project3" target="_blank">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Проект 3">
-                        <p>Проект 3 - Краткое описание проекта.</p>
-                    </a>
-                </div>
-            </section>
-        </div>
+<section>
+    <div class="project">
+        <h3>Проект 1: Креативный сайт</h3>
+        <p>Описание проекта. Этот проект был создан с использованием последних технологий веб-разработки, включая HTML, CSS и JavaScript.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Ваше Имя. Все права защищены.</p>
-    </footer>
+    <div class="project">
+        <h3>Проект 2: Динамическое приложение</h3>
+        <p>Описание проекта. Динамическое веб-приложение, разработанное для улучшения пользовательского опыта с акцентом на быстродействие.</p>
+    </div>
+
+    <div class="project">
+        <h3>Проект 3: Мобильное приложение</h3>
+        <p>Описание проекта. Приложение для мобильных устройств с интуитивно понятным интерфейсом и привлекательным дизайном.</p>
+    </div>
+</section>
+
+<footer>
+    <p>Свяжитесь со мной: <a href="mailto:example@example.com">example@example.com</a></p>
+</footer>
+
 </body>
 </html>

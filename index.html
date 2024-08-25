@@ -1,14 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио и Резюме</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .skills, .education, .experience {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skills div, .education div, .experience div {
+            width: 48%;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <p>Тут пока ничего нету(</p>
+    <header>
+        <h1>Ваше Имя</h1>
+        <p>Позиция, которую вы ищете | Город, Страна</p>
+        <p><a href="mailto:youremail@example.com" style="color: white;">youremail@example.com</a> | Телефон: +7 (XXX) XXX-XXXX</p>
+    </header>
+
+    <section>
+        <h2>Обо мне</h2>
+        <p>Здесь вы можете написать краткую информацию о себе. Расскажите о своем опыте, навыках и что отличает вас от других кандидатов.</p>
+    </section>
+
+    <section>
+        <h2>Навыки</h2>
+        <div class="skills">
+            <div>
+                <h3>Технические навыки</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, Java</li>
+                    <li>SQL, NoSQL</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Мягкие навыки</h3>
+                <ul>
+                    <li>Командная работа</li>
+                    <li>Критическое мышление</li>
+                    <li>Управление временем</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Опыт работы</h2>
+        <div class="experience">
+            <div>
+                <h3>Должность 1</h3>
+                <p>Название компании, Город</p>
+                <p><strong>Срок работы:</strong> Январь 2020 - настоящее время</p>
+                <ul>
+                    <li>Описание обязанностей и достижений</li>
+                    <li>Описание обязанностей и достижений</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Должность 2</h3>
+                <p>Название компании, Город</p>
+                <p><strong>Срок работы:</strong> Январь 2018 - Декабрь 2019</p>
+                <ul>
+                    <li>Описание обязанностей и достижений</li>
+                    <li>Описание обязанностей и достижений</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Образование</h2>
+        <div class="education">
+            <div>
+                <h3>Степень</h3>
+                <p>Название университета, Город</p>
+                <p><strong>Годы обучения:</strong> 2015 - 2019</p>
+            </div>
+            <div>
+                <h3>Дополнительное обучение</h3>
+                <p>Курсы или сертификации</p>
+                <p><strong>Год завершения:</strong> 2020</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Портфолио</h2>
+        <p>Здесь можно разместить ссылки на проекты или вставить изображения с кратким описанием.</p>
+        <ul>
+            <li><a href="https://example.com/project1" target="_blank">Проект 1</a> - Краткое описание проекта.</li>
+            <li><a href="https://example.com/project2" target="_blank">Проект 2</a> - Краткое описание проекта.</li>
+            <li><a href="https://example.com/project3" target="_blank">Проект 3</a> - Краткое описание проекта.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ваше Имя. Все права защищены.</p>
+    </footer>
 </body>
 </html>

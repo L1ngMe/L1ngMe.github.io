@@ -9,41 +9,57 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f5;
-            color: #444;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
         }
 
         header {
-            background-color: #ff6347;
+            background-image: url('https://images.unsplash.com/photo-1542281286-9e0a16bb7366');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 40px 20px;
             text-align: center;
+            padding: 80px 20px;
+            position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 36px;
+            font-size: 48px;
             font-weight: bold;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         header p {
-            margin: 5px 0;
+            margin: 10px 0 0;
+            font-size: 20px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
             font-size: 18px;
         }
 
-        a {
-            color: #ff6347;
-            text-decoration: none;
-        }
-
-        a:hover {
+        nav a:hover {
             text-decoration: underline;
         }
 
         section {
             padding: 40px 20px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 20px auto;
             background-color: white;
             border-radius: 10px;
@@ -51,135 +67,170 @@
         }
 
         h2 {
-            color: #ff6347;
+            color: #333;
             margin-bottom: 20px;
             font-size: 28px;
-            border-bottom: 2px solid #ff6347;
+            border-bottom: 2px solid #333;
             padding-bottom: 10px;
         }
 
-        .skills, .education, .experience {
+        .about, .skills, .experience, .education, .portfolio {
+            margin-bottom: 40px;
+        }
+
+        .skills, .experience, .education {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        .skills div, .education div, .experience div {
+        .skills div, .experience div, .education div {
             width: 48%;
             margin-bottom: 20px;
         }
 
-        .skills ul, .education ul, .experience ul {
+        .skills ul, .experience ul, .education ul {
             list-style-type: none;
             padding-left: 0;
         }
 
-        .skills li, .education li, .experience li {
+        .skills li, .experience li, .education li {
             margin-bottom: 10px;
             padding-left: 20px;
             position: relative;
         }
 
-        .skills li::before, .education li::before, .experience li::before {
+        .skills li::before, .experience li::before, .education li::before {
             content: '✔';
             position: absolute;
             left: 0;
-            color: #ff6347;
+            color: #333;
             font-size: 18px;
+        }
+
+        .portfolio img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .portfolio a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .portfolio a:hover {
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #ff6347;
+            background-color: #333;
             color: white;
             margin-top: 20px;
-            border-top: 2px solid #e94e2b;
+            border-top: 2px solid #444;
         }
+
     </style>
 </head>
 <body>
     <header>
         <h1>Ваше Имя</h1>
         <p>Позиция, которую вы ищете | Город, Страна</p>
-        <p><a href="mailto:youremail@example.com">youremail@example.com</a> | Телефон: +7 (XXX) XXX-XXXX</p>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#experience">Опыт</a>
+            <a href="#education">Образование</a>
+            <a href="#portfolio">Портфолио</a>
+        </nav>
     </header>
 
-    <section>
+    <section id="about" class="about">
         <h2>Обо мне</h2>
-        <p>Здесь вы можете написать краткую информацию о себе. Расскажите о своем опыте, навыках и что отличает вас от других кандидатов. Включите немного личности, чтобы выделиться.</p>
+        <p>Здесь вы можете написать краткую информацию о себе. Расскажите о своем опыте, навыках и что отличает вас от других кандидатов. Это ваше первое впечатление, сделайте его запоминающимся.</p>
     </section>
 
-    <section>
+    <section id="skills" class="skills">
         <h2>Навыки</h2>
-        <div class="skills">
-            <div>
-                <h3>Технические навыки</h3>
-                <ul>
-                    <li>HTML, CSS, JavaScript</li>
-                    <li>Python, Java</li>
-                    <li>SQL, NoSQL</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Мягкие навыки</h3>
-                <ul>
-                    <li>Командная работа</li>
-                    <li>Критическое мышление</li>
-                    <li>Управление временем</li>
-                </ul>
-            </div>
+        <div>
+            <h3>Технические навыки</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python, Java</li>
+                <li>SQL, NoSQL</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Мягкие навыки</h3>
+            <ul>
+                <li>Командная работа</li>
+                <li>Критическое мышление</li>
+                <li>Управление временем</li>
+            </ul>
         </div>
     </section>
 
-    <section>
+    <section id="experience" class="experience">
         <h2>Опыт работы</h2>
-        <div class="experience">
-            <div>
-                <h3>Должность 1</h3>
-                <p>Название компании, Город</p>
-                <p><strong>Срок работы:</strong> Январь 2020 - настоящее время</p>
-                <ul>
-                    <li>Описание обязанностей и достижений</li>
-                    <li>Описание обязанностей и достижений</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Должность 2</h3>
-                <p>Название компании, Город</p>
-                <p><strong>Срок работы:</strong> Январь 2018 - Декабрь 2019</p>
-                <ul>
-                    <li>Описание обязанностей и достижений</li>
-                    <li>Описание обязанностей и достижений</li>
-                </ul>
-            </div>
+        <div>
+            <h3>Должность 1</h3>
+            <p>Название компании, Город</p>
+            <p><strong>Срок работы:</strong> Январь 2020 - настоящее время</p>
+            <ul>
+                <li>Описание обязанностей и достижений</li>
+                <li>Описание обязанностей и достижений</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Должность 2</h3>
+            <p>Название компании, Город</p>
+            <p><strong>Срок работы:</strong> Январь 2018 - Декабрь 2019</p>
+            <ul>
+                <li>Описание обязанностей и достижений</li>
+                <li>Описание обязанностей и достижений</li>
+            </ul>
         </div>
     </section>
 
-    <section>
+    <section id="education" class="education">
         <h2>Образование</h2>
-        <div class="education">
-            <div>
-                <h3>Степень</h3>
-                <p>Название университета, Город</p>
-                <p><strong>Годы обучения:</strong> 2015 - 2019</p>
-            </div>
-            <div>
-                <h3>Дополнительное обучение</h3>
-                <p>Курсы или сертификации</p>
-                <p><strong>Год завершения:</strong> 2020</p>
-            </div>
+        <div>
+            <h3>Степень</h3>
+            <p>Название университета, Город</p>
+            <p><strong>Годы обучения:</strong> 2015 - 2019</p>
+        </div>
+        <div>
+            <h3>Дополнительное обучение</h3>
+            <p>Курсы или сертификации</p>
+            <p><strong>Год завершения:</strong> 2020</p>
         </div>
     </section>
 
-    <section>
+    <section id="portfolio" class="portfolio">
         <h2>Портфолио</h2>
-        <p>Здесь можно разместить ссылки на проекты или вставить изображения с кратким описанием.</p>
-        <ul>
-            <li><a href="https://example.com/project1" target="_blank">Проект 1</a> - Краткое описание проекта.</li>
-            <li><a href="https://example.com/project2" target="_blank">Проект 2</a> - Краткое описание проекта.</li>
-            <li><a href="https://example.com/project3" target="_blank">Проект 3</a> - Краткое описание проекта.</li>
-        </ul>
+        <p>Здесь можно разместить ссылки на проекты или изображения с кратким описанием.</p>
+        <div>
+            <a href="https://example.com/project1" target="_blank">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Проект 1">
+                <p>Проект 1 - Краткое описание проекта.</p>
+            </a>
+        </div>
+        <div>
+            <a href="https://example.com/project2" target="_blank">
+                <img src="https://images.unsplash.com/photo-1504691342899-c3f1b7a5d0a2" alt="Проект 2">
+                <p>Проект 2 - Краткое описание проекта.</p>
+            </a>
+        </div>
+        <div>
+            <a href="https://example.com/project3" target="_blank">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Проект 3">
+                <p>Проект 3 - Краткое описание проекта.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
